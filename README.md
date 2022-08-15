@@ -6,13 +6,24 @@ Steps :
 1 git clone https://github.com/sajeeds4/Random_MAC_gen/
 
 2 cd Random_MAC_gen                                     
-3 ls                                                    
-4 chmod +x mac.sh                                       
-5 sudo ./mac.sh                                         
+3 ls  
+note : mac.sh is for 2 interfaces and it is for tp link wifi adapter
+       mac2.sh is for primary network interface
+
+4 chmod +x mac.sh 
+  chmod +x mac2.sh
+
+to know your network interface names 
+use this commands
+$ ifconfig , ip addr , iwconfig
+
+5 sudo ./mac.sh  for 2 network interfaces
+6 sudo ./mac2.sh for single network interface 
 
 TO run at start follow this steps
 
-1 sudo nano /etc/systemd/system/mac.service
+1 sudo nano /etc/systemd/system/mac.service for 2 network interfaces
+  sudo nano /etc/systemd/system/mac2.service
 
 2 copy paste this 
 
@@ -25,13 +36,14 @@ Wants=network-online/target
 [Service]
 
 Type=simple
-ExecStart=/bin/bash /home/kali/Random_MAC_gen/mac.sh (note : please change the locaton of the file here)
+ExecStart=/bin/bash /home/kali/Random_MAC_gen/mac.sh (note : please change the locaton of the file here, change mac2.sh for single network interface )
 
 [Install]
 
 WantedBy=multi-user.target"
 
-3. sudo chmod 644 /etc/systemd/system/mac.service
+3. sudo chmod 644 /etc/systemd/system/mac.service for 2 network interfaces
+   sudo chmod 644 /etc/systemd/system/mac.service for single network interface
 4. reboot
 
 5. sudo service mac start
