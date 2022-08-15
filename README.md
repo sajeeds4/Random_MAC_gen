@@ -59,4 +59,4 @@ to disable
 9. sudo systemctl disable mac
 
 for any queries you can ping me instagram
-https://instagram.com/s4s_m_
+https://instagram.com/s4s_m_/
