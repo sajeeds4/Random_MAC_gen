@@ -34,4 +34,17 @@ WantedBy=multi-user.target"
 3. sudo chmod 644 /etc/systemd/system/mac.service
 4. reboot
 
-After reboot make sure everything is working fine
+5. sudo service mac start
+6. sudo service mac status
+ 
+ to run at reboot
+
+7. sudo systemctl enable mac
+8. sudo systemctl status mac
+
+to disable 
+
+9. sudo systemctl disable mac
+
+for any queries you can ping me instagram
+https://instagram.com/s4s_m_
