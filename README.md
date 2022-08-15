@@ -16,15 +16,18 @@ TO run at start follow this steps
 2 copy paste this 
 
 "[Unit]
+
 Description=Random mac address changer
 After=network-online.target
 Wants=network-online/target
 
 [Service]
+
 Type=simple
 ExecStart=/bin/bash /home/kali/Random_MAC_gen/mac.sh (note : please change the locaton of the file here)
 
 [Install]
+
 WantedBy=multi-user.target"
 
 3. sudo chmod 644 /etc/systemd/system/mac.service
