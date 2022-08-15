@@ -4,6 +4,7 @@ In the firmware of the network adapter chip, every network adapter has a unique 
 Steps :                                                 
                                                         
 1 git clone https://github.com/sajeeds4/Random_MAC_gen/
+
 2 cd Random_MAC_gen                                     
 3 ls                                                    
 4 chmod +x mac.sh                                       
